@@ -118,7 +118,10 @@ piping, sha256 streaming, and clock/timezone validation. Needs no root.
 - The **boot splash** is best-effort: a Plymouth script theme is installed
   only when Plymouth's `script.so` is present, and is skipped otherwise.
   Boot never depends on it. The post-login console banner is unconditional.
-- Not tested on hardware yet — the QEMU boot test is the next step.
+- **QEMU boot test passes** in both modes: legacy BIOS (isolinux) and UEFI
+  (GRUB under OVMF). The live system comes up, `ezpd` starts on its own, and
+  the wizard answers on port 80 with a DHCP lease. **Physical hardware is
+  still untested.**
 
 ## Layout
 
